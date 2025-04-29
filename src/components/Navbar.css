@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    background-color: transparent;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f6c90e;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2rem;
+    transition: color 0.3s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-right: 12px;
+  }
+  
+  .nav-links a:hover {
+    color: orange;
+  }
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 999;
+    min-width: 150px;
+    border-radius: 4px;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: whitesmoke;
+      flex-direction: column;
+      align-items: center;
+      display: none;
+    }
+    .nav-links a {
+      color: #333;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      background: none;
+      padding: 0;
+    }
+  
+    .dropdown-content a {
+      padding: 8px 0;
+      color: #f6c90e;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+  

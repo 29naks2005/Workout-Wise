@@ -1,0 +1,223 @@
+.heading {
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    min-height: 100vh;
+    color: #f1f1f1;
+    text-align: center;
+  }
+  
+  .heading .search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  
+  .heading select {
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 2px solid #00bfff;
+    border-radius: 10px;
+    outline: none;
+    background-color: #121212;
+    color: #f1f1f1;
+    width: 300px;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    margin: 20px;
+  }
+  
+  .heading select:hover {
+    border-color: #1e90ff;
+    background-color: #1c1c1c;
+  }
+  
+  .heading button {
+    padding: 14px 28px;
+    font-size: 18px;
+    background-color: #00bfff;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .heading button:hover {
+    background-color: #1e90ff;
+    color: #fff;
+  }
+  
+  .heading .exercise-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .exercise-card {
+    background-color: #1e1e1e;
+    border: 1px solid #2c2c2c;
+    padding: 24px;
+    width: 320px;
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+  }
+  
+  .exercise-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
+  }
+  
+  .exercise-card h3 {
+    font-size: 22px;
+    color: #00bfff;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+  }
+  
+  .exercise-card p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #cccccc;
+  }
+  
+  .exercise-card img {
+    margin-top: 12px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    border: 1px solid #333;
+  }
+  .exercise-detail {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1e1e2f;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  
+  .exercise-detail button {
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .exercise-detail button:hover {
+    background-color: #e63e3e;
+  }
+  
+  .exercise-detail h2 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: #ffd700;
+    letter-spacing: 1px;
+  }
+  
+  .exercise-detail img {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .exercise-detail p {
+    font-size: 1.3rem;
+    margin: 0.8rem 0;
+  }
+  
+  .exercise-detail span {
+    font-weight: bold;
+    color: #76c7c0;
+  }
+  
+  .custom-workout {
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 16px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  
+  .custom-workout h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #ffce00;
+  }
+  
+  .custom-workout p {
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+  }
+  
+  .exercise-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .exercise-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .exercise-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .exercise-card img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 10px 0;
+    border: 2px solid #333;
+  }
+  
+  .exercise-card h3 {
+    font-size: 20px;
+    color: #00bfff;
+    margin-bottom: 8px;
+  }
+  
+  .custom-workout button {
+    padding: 10px 18px;
+    font-size: 14px;
+    background-color: #ff4747;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-workout button:hover {
+    background-color: #e93e3e;
+  }
+  
+  
+  
+  
