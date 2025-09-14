@@ -74,18 +74,6 @@
     display: block;
   }
   
-  .hamburger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 4px;
-  }
-  
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-  }
   @media (max-width: 768px) {
     .nav-links {
       position: absolute;
@@ -102,10 +90,6 @@
     }
   
     .nav-links.open {
-      display: flex;
-    }
-  
-    .hamburger {
       display: flex;
     }
   

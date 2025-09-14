@@ -19,12 +19,8 @@ const Navbar = () => {
         <div className="dropdown">
           <Link href="/workouts">Workouts</Link>
         </div>
-      </div>
+        <Link href="/myPlan">Custom-Workout</Link>
 
-      <div className="hamburger" onClick={toggleMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
       </div>
     </nav>
   );
