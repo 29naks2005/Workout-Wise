@@ -22,7 +22,7 @@ export default function Start() {
 
       <div className="features image-container" data-aos="fade-up">
         <img 
-          src="https://www.pts.sg/wp-content/uploads/2017/12/Muscle-and-Body-Building-Training-1000x423.jpg" 
+          src="https://static.vecteezy.com/system/resources/previews/007/662/087/large_2x/healthy-lifestyle-concept-horizontal-shot-of-motivated-fitness-woman-in-active-wear-poses-in-plank-pose-on-fitness-mat-exercises-outdoors-enjoys-regular-training-wears-sunglasses-at-summer-time-free-photo.JPG" 
           alt="Workout Highlight"
           className="highlight-image"
         />

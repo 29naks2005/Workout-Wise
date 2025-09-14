@@ -11,8 +11,6 @@ const WorkoutSearch = () => {
   const [randomData, setRandomData] = useState([]);
   const [text, setText] = useState("");
   const [selectedExercise, setSelectedExercise] = useState(null);
-  const [customWorkout, setCustomWorkout] = useState([]);
-  const [showCustomWorkout, setShowCustomWorkout] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -38,19 +36,10 @@ const WorkoutSearch = () => {
       } catch (error) {
         console.error(error);
       }
-
-      const savedWorkout = localStorage.getItem('myWorkout');
-      if (savedWorkout) {
-        setCustomWorkout(JSON.parse(savedWorkout));
-      }
     }
 
     fetchRandomData();
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('myWorkout', JSON.stringify(customWorkout));
-  }, [customWorkout]);
 
   useEffect(() => {
     if (text && text !== "Select") {
@@ -80,21 +69,6 @@ const WorkoutSearch = () => {
     }
   }
 
-  const addToCustomWorkout = (exercise) => {
-    if (!customWorkout.find(item => item.id === exercise.id)) {
-      setCustomWorkout([...customWorkout, exercise]);
-    }
-  };
-
-  const removeFromCustomWorkout = (id) => {
-    setCustomWorkout(customWorkout.filter(item => item.id !== id));
-  };
-
-  const clearWorkout = () => {
-    setCustomWorkout([]);
-    localStorage.removeItem('myWorkout');
-  };
-
   return (
     <div>
       <Navbar />
@@ -123,33 +97,7 @@ const WorkoutSearch = () => {
               <option value="shoulders">Shoulders</option>
             </select>
 
-            <div style={{ display: 'flex', gap: '10px', margin: '10px 0' }}>
-              <button onClick={() => setShowCustomWorkout(!showCustomWorkout)}>
-                {showCustomWorkout ? 'Hide My Workout' : 'Show My Workout'}
-              </button>
-            </div>
-
-            {showCustomWorkout ? (
-              <div className='custom-workout'>
-                <h2>My Custom Workout</h2>
-                {customWorkout.length === 0 ? (
-                  <p>No workouts added yet.</p>
-                ) : (
-                  <>
-                    <button onClick={clearWorkout} style={{ marginBottom: '20px' }}>
-                      Clear My Workout
-                    </button>
-                    {customWorkout.map((exercise) => (
-                      <div key={exercise.id} className='exercise-card'>
-                        <h3>{exercise.name}</h3>
-                        <img src={exercise.gifUrl} alt={exercise.name} />
-                        <button onClick={() => removeFromCustomWorkout(exercise.id)}>Remove</button>
-                      </div>
-                    ))}
-                  </>
-                )}
-              </div>
-            ) : loading ? (
+            {loading ? (
               <div style={{ marginTop: '20px' }}>
                 <h2>Loading...</h2>
               </div>
@@ -171,15 +119,6 @@ const WorkoutSearch = () => {
                       onClick={() => setSelectedExercise(item)}
                       style={{ cursor: "pointer" }}
                     />
-                    {customWorkout.some(ex => ex.id === item.id) ? (
-                      <button style={{ backgroundColor: 'green', color: 'white' }} disabled>
-                        ✓ Added
-                      </button>
-                    ) : (
-                      <button onClick={() => addToCustomWorkout(item)}>
-                        Add to My Workout
-                      </button>
-                    )}
                   </div>
                 ))}
               </div>

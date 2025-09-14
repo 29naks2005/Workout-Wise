@@ -5,7 +5,7 @@ import './Slider.css';
 
 const slides = [
   {
-    image: 'https://t4.ftcdn.net/jpg/04/14/04/09/360_F_414040933_5QBgimwDlUzhFg1nnkirVbb94Reed8ZZ.jpg',
+    image: 'https://images.squarespace-cdn.com/content/v1/636969f5a011d748629bcac2/8f698cf6-4357-4f29-b983-c611aaaf05dd/cristiano+ronaldo+working+out.jpeg',
     heading: 'START',
     highlight: 'TRAINING',
     subheading: 'TODAY',
@@ -13,7 +13,7 @@ const slides = [
     buttonLink: '/join'
   },
   {
-    image: 'https://global.discourse-cdn.com/tnation/original/4X/7/0/a/70ab62048176f943b735fc812d427f0d6c3041d5.jpeg',
+    image: 'https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2019/08/John-Cena-Sitting-Down-Resting.jpg?quality=86&strip=all',
     heading: 'BUILD',
     highlight: 'MUSCLE',
     subheading: 'FAST',
@@ -21,7 +21,7 @@ const slides = [
     buttonLink: '/get-started'
   },
   {
-    image: 'https://t4.ftcdn.net/jpg/07/07/99/65/360_F_707996560_EfSgERO8RKaXUdW87UO10t1TsyofCYfH.jpg',
+    image: 'https://hips.hearstapps.com/hmg-prod/images/z6c-2629-centr-power-image-credit-centr-1624308552.jpg',
     heading: 'TRANSFORM',
     highlight: 'YOUR BODY',
     subheading: 'WITH US',
@@ -29,7 +29,7 @@ const slides = [
     buttonLink: '/explore'
   },
   {
-    image: 'https://t3.ftcdn.net/jpg/08/13/79/02/360_F_813790223_6EXXi3lzVQWa95rvlVmKkhMSn74OHR6G.jpg',
+    image: 'https://images.wallpapersden.com/image/download/dwayne-johnson-workout-hd-gym-photoshoot_bW5uammUmZqaraWkpJRmbmdlrWZlbWc.jpg',
     heading: 'TRAIN',
     highlight: 'HARD',
     subheading: 'STAY STRONG',
@@ -37,7 +37,7 @@ const slides = [
     buttonLink: '/join'
   },
   {
-    image: 'https://t4.ftcdn.net/jpg/03/50/81/89/360_F_350818931_54A6UVQiJIK8UHFWB0NTGSIKO9jyTbQP.jpg',
+    image: 'https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2018/10/MU0116_FE_COVER_05.jpg?quality=86&strip=all',
     heading: 'ACHIEVE',
     highlight: 'GOALS',
     subheading: 'WITH GRIT',
