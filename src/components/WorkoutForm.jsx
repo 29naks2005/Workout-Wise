@@ -5,11 +5,13 @@ import "./WorkoutForm.css"; // 👈 yeh line add karna
 export default function WorkoutForm({ onSubmit }) {
   const [fitnessLevel, setFitnessLevel] = useState("beginner");
   const [goal, setGoal] = useState("fat_loss");
+  const [workoutType, setWorkoutType] = useState("Gym");
+
 
   function handleSubmit(e) {
     e.preventDefault();
     if (onSubmit) {
-      onSubmit({ fitnessLevel, goal });
+      onSubmit({ fitnessLevel, goal , workoutType });
     }
   }
 
@@ -33,6 +35,13 @@ export default function WorkoutForm({ onSubmit }) {
           <option value="fat_loss">Fat Loss</option>
           <option value="muscle_gain">Muscle Gain</option>
           <option value="endurance">Endurance</option>
+        </select>
+      </label>
+      <label>
+        <span>Workout Type:</span>
+        <select value={goal} onChange={(e) => setWorkoutType(e.target.value)}>
+          <option value="Gym">Gym</option>
+          <option value="Home_workout">Home Workout</option>
         </select>
       </label>
 
