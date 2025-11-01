@@ -13,7 +13,10 @@ export default function Home() {
       <Start/>
       <WhatIOffer />
       <WorkoutHighlight/>
-      <BMICalculator/>
+      <section id="bmi-section" className="bmi-section">
+        <BMICalculator/>
+      </section>
+     
     </div>
   );
 }

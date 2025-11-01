@@ -19,7 +19,9 @@ const Navbar = () => {
         <div className="dropdown">
           <Link href="/workouts">Workouts</Link>
         </div>
-        <Link href="/myPlan">Custom-Workout</Link>
+        <Link href="#bmi-section">
+          BMI/M.Calories
+</Link>
 
       </div>
     </nav>
