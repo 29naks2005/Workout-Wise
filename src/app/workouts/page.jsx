@@ -39,9 +39,11 @@ const WorkoutSearch = () => {
         console.error(error);
       }
 
-      const savedWorkout = localStorage.getItem('myWorkout');
-      if (savedWorkout) {
-        setCustomWorkout(JSON.parse(savedWorkout));
+      if (typeof window !== 'undefined') {
+        const savedWorkout = localStorage.getItem('myWorkout');
+        if (savedWorkout) {
+          setCustomWorkout(JSON.parse(savedWorkout));
+        }
       }
     }
 
@@ -49,7 +51,9 @@ const WorkoutSearch = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('myWorkout', JSON.stringify(customWorkout));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('myWorkout', JSON.stringify(customWorkout));
+    }
   }, [customWorkout]);
 
   useEffect(() => {
@@ -92,7 +96,9 @@ const WorkoutSearch = () => {
 
   const clearWorkout = () => {
     setCustomWorkout([]);
-    localStorage.removeItem('myWorkout');
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('myWorkout');
+    }
   };
 
   return (
